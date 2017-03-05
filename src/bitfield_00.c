@@ -4,17 +4,19 @@
 int
 main(void)
 {
+	int value;
+
 	struct {
 		int apple  : 2;
 		int orange : 4;
 		int tomato : 5;
 	} x;
 
-	x.apple = 1;
-	x.orange = 2;
-	x.tomato = 3;
-
-	ck_pr_rfo(&x);
+	ck_pr_store_int(&value, 1);
+	x.apple = value;
+	x.orange = value;
+	x.tomato = value;
 	pause();
+	ck_pr_rfo(&x);
 	return x.apple;
 }
