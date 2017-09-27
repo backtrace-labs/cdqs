@@ -17,6 +17,5 @@ main(void)
 	x.orange = value;
 	x.tomato = value;
 	pause();
-	ck_pr_rfo(&x);
 	return x.apple;
 }
